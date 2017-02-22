@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/NewXMLSchema" xmlns:tns="http://www.example.org/NewXMLSchema" elementFormDefault="qualified">
+
+    <element name="Animals" type="tns:Type"></element>
+    
+
+
+
+    <complexType name="Type">
+    	<sequence>
+    		<element name="Wild" maxOccurs="1" minOccurs="1">
+    			<complexType>
+    				<sequence>
+    					<element name="Lion">
+    						<complexType>
+    							<sequence>
+    								<element name="Eat" type="string"
+    									maxOccurs="1" minOccurs="1">
+    								</element>
+    								<element name="Location"
+    									type="string" maxOccurs="unbounded" minOccurs="1">
+    								</element>
+    							</sequence>
+    						</complexType>
+    					</element>
+    					<element name="Tiger">
+    						<complexType>
+    							<sequence>
+    								<element name="Eat" type="string"
+    									maxOccurs="1" minOccurs="1">
+    								</element>
+    								<element name="Location"
+    									type="string" maxOccurs="unbounded" minOccurs="1">
+    								</element>
+    							</sequence>
+    						</complexType>
+    					</element>
+    				</sequence>
+    				<attribute name="numberOfAnimals" type="int"></attribute>
+    			</complexType>
+    		</element>
+
+    		<element name="Domestic">
+    			<complexType>
+    				<sequence>
+    					<element name="Cow">
+    						<complexType>
+    							<sequence>
+    								<element name="eat"
+    									type="string">
+    								</element>
+    							</sequence>
+    							<attribute name="name" type="string">
+    							</attribute>
+    						</complexType>
+    					</element>
+    					<element name="Goat">
+    						<complexType>
+    							<sequence>
+    								<element name="species"
+    									type="string">
+    								</element>
+    							</sequence>
+    							<attribute name="price" type="string">
+    							</attribute>
+    						</complexType>
+    					</element>
+    				</sequence>
+    			</complexType>
+    		</element>
+    	</sequence>
+    </complexType>
+
+
+</schema>
